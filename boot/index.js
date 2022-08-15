@@ -1,2 +1,2 @@
-const startMongo = require('./mongo')
-startMongo()
+const startMongo = require('./mongo');
+startMongo();

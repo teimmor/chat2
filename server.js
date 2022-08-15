@@ -12,7 +12,7 @@ const io = socketIo(httpServer, {
         origin: '*'
     }
 });
-io. on('connention', (socket) => {
+io. on('connection', (socket) => {
         let nsData = structure.map((namespace) => {
         return {
             title: namespace.title,

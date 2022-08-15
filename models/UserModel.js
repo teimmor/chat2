@@ -1,9 +1,26 @@
-const { isInteger, toInteger } = require('lodash')
 const mongoose = require('mongoose');
+Schema = mongoose.Schema
 
-const userSchema = new mongoose.Schema({
-    first_name: String
-})
+const UserSchema = new Schema({
+    username: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    messages: {
+        type: String
+    },
+    usersChannels: {
+        type: Array,
+        default: ['Public-Main']
+    }
+},
+{
+    timestamps: true
+});
 
-const userModel = mongoose.model('User', userSchema)
-module.exports = userModel
+module.exports = mongoose.model('User', UserSchema);

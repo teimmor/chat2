@@ -1,4 +1,4 @@
-const { threadId } = require("worker_threads");
+// const { threadId } = require("worker_threads");
 
 class NamespaceController {
     constructor(title, endpoint) {
@@ -12,4 +12,4 @@ class NamespaceController {
     }
 }
 
-module.exports = NamespaceController
+module.exports = NamespaceController;
